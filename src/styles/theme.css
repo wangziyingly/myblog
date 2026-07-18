@@ -1,0 +1,77 @@
+/* ===== 暮色紫罗兰 · Tropic Dusk 主题定制样式 ===== */
+
+/* 全屏照片背景:用 fixed 伪元素承载,iOS 上 background-attachment: fixed 不生效 */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background: url("/images/banner-tropic.jpg") center / cover no-repeat;
+}
+
+/* 亮色模式:罩一层薄纱提亮,保证卡片外文字可读 */
+:root:not(.dark) body::before {
+    background-image: linear-gradient(
+            oklch(0.97 0.01 var(--hue) / 55%),
+            oklch(0.97 0.01 var(--hue) / 55%)
+        ),
+        url("/images/banner-tropic.jpg");
+}
+
+/* 暗色模式:轻压一档亮度,让卡片和文字浮出来 */
+:root.dark body::before {
+    background-image: linear-gradient(oklch(0.1 0.03 var(--hue) / 35%), oklch(0.1 0.03 var(--hue) / 35%)),
+        url("/images/banner-tropic.jpg");
+}
+
+/* 卡片:半透明毛玻璃,浮在照片上(变量在 variables.styl 是不透明底,这里覆盖成半透明) */
+html:root:not(.dark) {
+    --card-bg: rgba(255, 255, 255, 0.88);
+    --float-panel-bg: rgba(255, 255, 255, 0.92);
+}
+html:root.dark {
+    --card-bg: oklch(0.21 0.025 var(--hue) / 82%);
+    --float-panel-bg: oklch(0.19 0.02 var(--hue) / 92%);
+}
+.card-base {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 2px 16px oklch(0.2 0.05 var(--hue) / 18%);
+}
+:root.dark .card-base {
+    box-shadow: 0 2px 16px oklch(0.05 0.02 var(--hue) / 40%);
+}
+
+/* 暮色星点:仅暗色模式下,几粒星光缓慢明灭 */
+#bluehour-stars {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 5;
+    overflow: hidden;
+    display: none;
+}
+:root.dark #bluehour-stars {
+    display: block;
+}
+.star-fleck {
+    position: absolute;
+    border-radius: 50%;
+    background: oklch(0.92 0.02 var(--hue));
+    opacity: 0;
+    animation: star-twinkle ease-in-out infinite;
+}
+@keyframes star-twinkle {
+    0%,
+    100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.55;
+    }
+}
+@media (prefers-reduced-motion: reduce) {
+    .star-fleck {
+        display: none;
+    }
+}
