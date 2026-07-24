@@ -38,8 +38,8 @@ export const navBarConfig: NavBarConfig = {
 	links: [
 		LinkPreset.Home,
 		{
-			name: "游戏作品",
-			url: "/archive/?category=游戏作品",
+			name: "学习记录",
+			url: "/archive/?category=学习记录",
 		},
 		{
 			name: "生活随笔",

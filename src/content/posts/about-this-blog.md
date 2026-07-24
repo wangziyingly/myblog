@@ -3,7 +3,7 @@ title: 关于这个博客 · About This Blog
 published: 2026-07-24
 description: 这里会有技术、作品、学习、代码,还有生活。A corner for tech, projects, learning, code — and life.
 image: "/images/sunset-lake.jpg"
-tags: [博客, 随笔, Meta]
+tags: [日常]
 category: 随笔
 pinned: true
 draft: false

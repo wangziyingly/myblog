@@ -3,7 +3,7 @@ title: 傍晚七点半,山在换颜色 · Watching the Blue Hour
 published: 2026-07-10
 description: 散步到湖边等一场蓝调时刻,记录下天色从金橙到深蓝的二十分钟。Waiting by the lake for the blue hour to arrive.
 image: "/images/moonrise.jpg"
-tags: [日常, 散步, 蓝调时刻]
+tags: [日常]
 category: 生活随笔
 draft: false
 ---

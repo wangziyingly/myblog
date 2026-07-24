@@ -3,8 +3,8 @@ title: 我做的第一个小游戏《暮色旅人》· My First Little Game
 published: 2026-07-15
 description: 用 three.js 做的一个黄昏徒步探索小游戏,附开发过程和踩坑记录。A twilight hiking game built with three.js.
 image: "/images/twilight-road.jpg"
-tags: [游戏开发, three.js, 作品]
-category: 游戏作品
+tags: [学习]
+category: 学习记录
 draft: false
 ---
 

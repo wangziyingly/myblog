@@ -3,7 +3,7 @@ title: 这个博客是怎么搭起来的 · How I Built This Blog
 published: 2026-06-28
 description: 基于 Astro + fuwari 模板,调成了蓝调时刻的配色。Built on Astro + the fuwari template, tuned to blue hour colors.
 image: "/images/lake-mirror.jpg"
-tags: [Astro, 前端, 博客, 教程]
+tags: [学习, 安利]
 category: 技术开发
 draft: false
 ---

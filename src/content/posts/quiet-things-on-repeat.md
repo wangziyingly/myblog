@@ -3,7 +3,7 @@ title: 安静时刻循环清单 · Quiet Things on Repeat
 published: 2026-07-05
 description: 一份不定期更新的安利清单:游戏、音乐、纪录片,适合在天色变蓝的时候打开。Games, music and films for the bluest minutes of the day.
 image: "/images/star-ledge.jpg"
-tags: [安利, 清单, 好物]
+tags: [安利, 日常]
 category: 分享安利
 draft: false
 ---
