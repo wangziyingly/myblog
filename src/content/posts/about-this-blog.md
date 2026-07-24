@@ -5,6 +5,7 @@ description: 这里会有技术、作品、学习、代码,还有生活。A corn
 image: "/images/sunset-lake.jpg"
 tags: [博客, 随笔, Meta]
 category: 随笔
+pinned: true
 draft: false
 ---
 
