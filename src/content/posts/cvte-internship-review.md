@@ -2,7 +2,6 @@
 title: 实习复盘：我如何把一套课堂行为分析系统从零跑通
 published: 2026-07-27
 description: 在 CVTE 做算法实习的几个月，我参与搭建了一套课堂学生行为分析系统：检测追踪、VLM 行为识别、标注工具、双阈值滞回事件合并，记录技术路线与踩坑。
-image: "/images/cvte/pipeline_architecture.png"
 tags: [实习, 学习]
 category: 技术开发
 draft: false
@@ -14,7 +13,7 @@ draft: false
 
 系统的目标听起来简单：输入一节课的课堂录像，输出每个学生的行为时间轴。但拆开看，它是一条五个环节的流水线：
 
-![端到端流水线](/images/cvte/pipeline_architecture.png)
+![全流程流水线（实习汇报 PPT 原图）](/images/cvte/ppt_pipeline.png)
 
 - **T05 检测 + 追踪**：逐帧检测学生人体并分配追踪 ID，输出帧图片 + 关键点 JSON；
 - **T08/T09 事件提取**：把逐帧的检测结果聚合成有起止时间的行为事件；
@@ -91,7 +90,7 @@ for start_ts, end_ts in segments:
 
 效果对比如下图：原始预测里的单帧毛刺被"溶解"，小空洞被"桥接"，最后得到一整段干净的"看书"行为。
 
-![双阈值滞回示意](/images/cvte/hysteresis_demo.png)
+![双阈值滞回核心（实习汇报 PPT 原图）](/images/cvte/ppt_hysteresis.png)
 
 还有一个细节顺序很关键：**必须先桥接、后溶解**。比如"看书 90s | 听讲 30s | 看书 90s"，如果先溶解（假设 min_duration=120s），两段 90s 都会被各自杀掉；先桥接则能合成 210s 的有效事件。
 
