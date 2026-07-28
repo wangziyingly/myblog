@@ -4,7 +4,7 @@ published: 2026-07-24
 description: 这里会有技术、作品、学习、代码,还有生活。A corner for tech, projects, learning, code — and life.
 image: "/images/sunset-lake.jpg"
 tags: [日常]
-category: 随笔
+category: 生活随笔
 pinned: true
 draft: false
 ---
